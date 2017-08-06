@@ -213,8 +213,8 @@ class LinkHintsMode
         localHintDescriptor = HintCoordinator.getLocalHintMarker desc
         el = DomUtils.createElement "div"
         el.rect = localHintDescriptor.rect
-        el.style.left = el.rect.left + "px"
-        el.style.top = el.rect.top  + "px"
+        el.style.left = (window.scrollX / 2) + el.rect.left + "px"
+        el.style.top = (window.scrollY / 2) + el.rect.top  + "px"
         # Each hint marker is assigned a different z-index.
         el.style.zIndex = @getNextZIndex()
         extend el,
